@@ -31,14 +31,32 @@ require_once(__DIR__ . "/config.php");
     </div>
     <div class="navbar-collapse collapse" id="navbar-collapsible">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="/#section2">What?</a></li>
-        <li><a href="/#section3">Why?</a></li>
-        <li><a href="/#section4">How?</a></li>
-        <li><a href="/#section6">Who?</a></li>
-        <li>&nbsp;</li>
+        <?php
+        if (!isset($navbar))
+          echo '<li><a href="/#section2">What?</a></li>'
+            . '<li><a href="/#section3">Why?</a></li>'
+            . '<li><a href="/#section4">How?</a></li>'
+            . '<li><a href="/#section6">Who?</a></li>'
+            . '<li>&nbsp;</li>';
+        else
+          foreach ($navbar as $li)
+            echo '<li><a href="' . $li[1] . '">' . $li[0] . '</a></li>';
+        ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="/#section5">Log In</a></li>
+        <?php if ($loggedIn == false): ?>
+          <li><a href="/#section5">Log In</a></li>
+        <?php else: ?>
+          <li><a href="/account">Hello, <?=$user?></a></li>
+          <li>
+            <a href="/settings" title="Modify Settings">
+              <i class="fa fa-cog"></i></a>
+          </li>
+          <li>
+            <a href="/logout" title="Log Out">
+              <i class="fa fa-power-off"></i></a>
+          </li>
+        <?php endif; ?>
         <li>&nbsp;</li>
       </ul>
     </div>

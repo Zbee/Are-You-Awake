@@ -64,9 +64,19 @@ a.list-group-item.active,[class*='-info'] {
     color:#dedeff;
 }
 
+.section:nth-child(even) a {
+    color:#dedeff;
+    text-decoration: underline;
+}
+
 .section:nth-child(odd) {
     background-color: #e5e5ef;
     color:#686868;
+}
+
+.section:nth-child(odd) a {
+    color:#686868;
+    text-decoration: underline;
 }
 
 footer {

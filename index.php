@@ -198,12 +198,13 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
         <h1>Who made Are You Awake?</h1>
         <br>
         <p class="lead">
-          Are You Awake was created by <a href="https://keybase.io/Zbee">
-          Ethan Henderson (Zbee)</a> on an off-day.
+          Are You Awake was first created by <a href="https://keybase.io/Zbee"
+            target="_blank">Ethan Henderson (Zbee)</a> on an off-day.
         </p>
-        <br> 
-        <img src="https://i.imgur.com/mGOEBGi.jpg" alt="Zbee's face"
-          class="img-circle" height="120">
+        <br>
+        <a href="https://keybase.io/Zbee" target="_blank">
+          <img src="https://i.imgur.com/mGOEBGi.jpg" alt="Zbee's face"
+            class="img-circle" height="256"></a>
     </div>
   </div>
 </section>

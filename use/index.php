@@ -6,10 +6,16 @@ require("/var/www/awake/assets/php/header.php");
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
 <?php
-$userID = $fb->get('/me')->getDecodedBody()["id"];
+$userFriends = $fb->get('/me/friends')
+  ->getDecodedBody()["summary"]["total_count"];
 
-$response = $fb->get('/' . $userID)->getDecodedBody();
-var_dump($response);
+$response = $fb->get('/me/taggable_friends')->getDecodedBody();
+foreach ($response["data"] as $friend) {
+  echo "name: " . $friend["name"];
+  echo "<br>";
+  echo "picture: <img src='" . $friend["picture"]["data"]["url"] . "'>";
+  echo "<hr>";
+}
 ?>
     </div>
   </div>

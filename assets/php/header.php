@@ -16,6 +16,7 @@ require_once(__DIR__ . "/config.php");
       <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
     <link href="/assets/css/styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
   </head>
   <body>
 <nav class="navbar navbar-trans navbar-fixed-top" role="navigation">

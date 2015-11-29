@@ -52,6 +52,44 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
             </div>
           </div>
       </div><!--/row-->
+      <div class="row">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-2 text-center">
+                <h3>Open Source</h3>
+                <p>
+                  Leverages the power of more than the Are You Awake developers
+                  to further our code base.
+                </p>
+                <i class="fa fa-gavel fa-5x"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 text-center">
+                <h3>Expansive</h3>
+                <p>
+                  Instead of just picking our favorite social and communication
+                  applications, many are included.
+                </p>
+                <i class="fa fa-expand fa-5x"></i>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 text-center">
+            <div class="row">
+              <div class="col-sm-10 text-center">
+                <h3>Intelligent</h3>
+                <p>
+                  Using machine learning Are You Awake doesn't just assume a
+                  humn is asleep, but rather relies on past data as well.
+                </p>
+                <i class="fa fa-server fa-5x"></i>
+              </div>
+            </div>
+          </div>
+      </div><!--/row-->
     <div class="row"><br></div>
   </div><!--/container-->
 </section>

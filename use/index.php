@@ -58,7 +58,7 @@ require("/var/www/awake/assets/php/header.php");
       
       <i style="font-size:120px;cursor:pointer" id="envelope"
         class="fa fa-envelope fa-5x"></i>
-      <br>
+      <br><br>
       <div class="collapse" id="fbFriends">
         <div class="well">
           <div class="form-group">

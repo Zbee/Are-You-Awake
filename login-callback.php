@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/config.php");
+require_once("/var/www/awake/assets/php/config.php");
 
 $helper = $fb->getRedirectLoginHelper();
 try {

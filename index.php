@@ -4,10 +4,8 @@ require("/var/www/awake/assets/php/header.php");
 $helper = $fb->getRedirectLoginHelper();
 $permissions = [
   "public_profile",
-  "user_about_me",
   "email",
-  "user_friends",
-  "read_custom_friendlists"
+  "user_friends"
 ];
 $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $permissions);
 ?>

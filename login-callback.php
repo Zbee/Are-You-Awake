@@ -18,8 +18,7 @@ if (isset($accessToken)) {
   $oAuth2Client = $fb->getOAuth2Client();
   $accessToken = $oAuth2Client->getLongLivedAccessToken($accessToken);
   $_SESSION['facebook_access_token'] = (string) $accessToken;
-
-
+  
   header("Location: http://awake.zbee.me/use");
   die();
 }

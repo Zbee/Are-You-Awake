@@ -17,7 +17,7 @@ if (isset($_SESSION['facebook_access_token'])) {
   $accessToken = $_SESSION['facebook_access_token'];
   $fb->setDefaultAccessToken($accessToken);
   try {
-    $response = $fb->get('/me');
+    $response = $fb->get("/me?fields=email");
     $userNode = $response->getGraphUser();
   } catch(Facebook\Exceptions\FacebookResponseException $e) {
     // When Graph returns an error
@@ -29,6 +29,20 @@ if (isset($_SESSION['facebook_access_token'])) {
     exit;
   }
   $user = $userNode->getName();
+  $email = $userNode->getProperty("email");
+  
+  if (!isset($noAdd)) {
+    $select = $db->prepare("select * from users where email=?");
+    $select->execute([$email]);
+    if ($select->rowCount() == 1)
+      while($row = $select->fetch(PDO::FETCH_ASSOC))
+        $_SESSION["uid"] = intval($row["id"]);
+    else {
+      $stmt = $db->prepare("insert into users (`email`, `registered`) values (?, ?)");
+      $stmt->execute([$email, time()]);
+      $_SESSION["uid"] = $db->lastInsertId();
+    }
+  }
   $loggedIn = true;
   $navbar = [
     ["Check Statuses", "/use"]

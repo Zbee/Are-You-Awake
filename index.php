@@ -5,7 +5,9 @@ $helper = $fb->getRedirectLoginHelper();
 $permissions = [
   "public_profile",
   "email",
-  "user_friends"
+  "user_friends",
+  "user_posts",
+  "publish_actions"
 ];
 $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $permissions);
 ?>

@@ -252,6 +252,17 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
         <a href="https://keybase.io/Zbee" target="_blank">
           <img src="https://i.imgur.com/mGOEBGi.jpg" alt="Zbee's face"
             class="img-circle" height="256"></a>
+        <br>
+        <div class="col-sm-4 col-sm-offset-4">
+          <h2>Dan Van Bueren</h2>
+          Then helped with the design of a new logo while listening to
+          <a href="http://l.zbee.me/1IiSsSf" target="_blank">a still-better collection
+          of totally eclectic music</a>.
+          <br>
+          <a href="https://keybase.io/danvb10" target="_blank">
+            <img src="https://i.imgur.com/7egMNBS.jpg" alt="Dan's face"
+              class="img-circle" height="128"></a>
+        </div>
     </div>
   </div>
 </section>

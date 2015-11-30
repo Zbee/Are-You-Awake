@@ -4,30 +4,14 @@
       <div class="col-xs-6 col-sm-6 col-md-3 column">          
           <h4>Information</h4>
           <ul class="nav">
-            <li><a href="about-us.html">Products</a></li>
-            <li><a href="about-us.html">Services</a></li>
-            <li><a href="about-us.html">Benefits</a></li>
-            <li><a href="elements.html">Developers</a></li>
+            <li><a href="https://github.com/Zbee/Are-You-Awake-">
+              Open Source on GitHub
+            </a></li>
+            <li><a href="http://l.zbee.me/1HyA3Rn">
+              Utilizing the Sectionalize Theme
+            </a></li>
           </ul> 
         </div>
-      <div class="col-xs-6 col-md-3 column">          
-          <h4>Follow Us</h4>
-          <ul class="nav">
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Google+</a></li>
-            <li><a href="#">Pinterest</a></li>
-          </ul> 
-      </div>
-      <div class="col-xs-6 col-md-3 column">          
-          <h4>Contact Us</h4>
-          <ul class="nav">
-            <li><a href="#">Email</a></li>
-            <li><a href="#">Headquarters</a></li>
-            <li><a href="#">Management</a></li>
-            <li><a href="#">Support</a></li>
-          </ul> 
-      </div>
       <div class="col-xs-6 col-md-3 column">          
           <h4>Customer Service</h4>
           <ul class="nav">
@@ -36,6 +20,21 @@
             <li><a href="#">Privacy Policy</a></li>
             <li><a href="#">Terms &amp; Conditions</a></li>
           </ul> 
+      </div>
+      <div class="col-xs-6 col-md-3 column">          
+          <h4>Contact Us</h4>
+          <ul class="nav">
+            <li>
+              <a href="https://keybase.io/zbee">Ethan Henderson (Zbee)</a>
+            </li>
+          </ul> 
+      </div>
+      <div class="col-xs-6 col-md-3 column">          
+          <h4>Applications So Far</h4>
+          <ul class="nav">
+            <li><i class="fa fa-facebook"></i> Facebook</li>
+            <li></li>
+          </ul>
       </div>
     </div><!--/row-->
   </div>

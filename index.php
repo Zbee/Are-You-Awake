@@ -252,7 +252,7 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
         <a href="https://keybase.io/Zbee" target="_blank">
           <img src="https://i.imgur.com/mGOEBGi.jpg" alt="Zbee's face"
             class="img-circle" height="256"></a>
-        <br>
+        <br><br>
         <div class="col-sm-4 col-sm-offset-4">
           <h2>Dan Van Bueren</h2>
           Then helped with the design of a new logo and managing textual content

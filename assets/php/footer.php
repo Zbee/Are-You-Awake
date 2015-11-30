@@ -13,12 +13,11 @@
           </ul> 
         </div>
       <div class="col-xs-6 col-md-3 column">          
-          <h4>Customer Service</h4>
+          <h4>Data</h4>
           <ul class="nav">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Delivery Information</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li>We have <b>1</b> user</li>
+            <li>monitoring <b>4</b> friends</li>
+            <li>who average <b>7.4</b>hrs of sleep</li>
           </ul> 
       </div>
       <div class="col-xs-6 col-md-3 column">          

@@ -52,6 +52,7 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
             </div>
           </div>
       </div><!--/row-->
+      <br>
       <div class="row">
           <div class="col-sm-4">
             <div class="row">
@@ -241,7 +242,9 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
         <br>
         <p class="lead">
           Are You Awake was first created by <a href="https://keybase.io/Zbee"
-            target="_blank">Ethan Henderson (Zbee)</a> on an off-day.
+            target="_blank">Ethan Henderson (Zbee)</a> on an off-day in November
+          2015 while listening to a <a href="http://l.zbee.me/1XqkF0u"
+            target="_blank">poor collection of electronic music</a>.
         </p>
         <br>
         <a href="https://keybase.io/Zbee" target="_blank">

@@ -255,7 +255,8 @@ $loginUrl = $helper->getLoginUrl('http://awake.zbee.me/login-callback.php', $per
         <br>
         <div class="col-sm-4 col-sm-offset-4">
           <h2>Dan Van Bueren</h2>
-          Then helped with the design of a new logo while listening to
+          Then helped with the design of a new logo and managing textual content
+          while listening to
           <a href="http://l.zbee.me/1IiSsSf" target="_blank">a still-better collection
           of totally eclectic music</a>.
           <br>

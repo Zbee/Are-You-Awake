@@ -92,8 +92,9 @@ $("#fb").click(function() {
        res.responseJSON.forEach(function(value) {
         $("#fbFriends .fa-spin").hide()
         $("#fbFriends .well").append(
-          "<a href='#' title='" + value[0]
-          + "'><img class='img-circle' src='" + value[1] + "'> "
+          "<a href='/confirm?id=" + value[2] + "&name=" + value[0]
+          + "&platform=fb' title='" + value[0]+ "'><img class='img-circle' "
+          + "src='" + value[1] + "'> "
         )
        })
       }

@@ -26,6 +26,9 @@
             <li>
               <a href="https://keybase.io/zbee">Ethan Henderson (Zbee)</a>
             </li>
+            <li>
+              <a href="https://keybase.io/danvb10">Dan Van Bueren</a>
+            </li>
           </ul> 
       </div>
       <div class="col-xs-6 col-md-3 column">          

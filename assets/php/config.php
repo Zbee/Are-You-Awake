@@ -38,9 +38,13 @@ if (isset($_SESSION['facebook_access_token'])) {
       while($row = $select->fetch(PDO::FETCH_ASSOC))
         $_SESSION["uid"] = intval($row["id"]);
     else {
-      $stmt = $db->prepare("insert into users (`email`, `registered`) values (?, ?)");
-      $stmt->execute([$email, time()]);
+      $insert = $db->prepare("insert into users (`email`, `registered`) values (?, ?)");
+      $insert->execute([$email, time()]);
       $_SESSION["uid"] = $db->lastInsertId();
+      $connect = $db->prepare(
+        "insert into connections (`user`, `type`, `platform`, `platform_id`) values (?, ?, ?, ?)"
+      );
+      $connect->execute([$_SESSION["uid"], 1, "fb", $userNode->getProperty("id")]);
     }
   }
   $loggedIn = true;

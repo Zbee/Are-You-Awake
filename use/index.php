@@ -6,11 +6,35 @@ require("/var/www/awake/assets/php/header.php");
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
       <h1>Choose the application a friend is most active on</h1>
-      <i style="font-size:120px;cursor:pointer" id="fb"
-        class="fa fa-facebook fa-5x"></i>
+      <?php
+      $connections = [];
+      $select = $db->prepare("select * from connections where user=?");
+      $select->execute([$_SESSION["uid"]]);
+      while($row = $select->fetch(PDO::FETCH_ASSOC))
+        array_push($connections, $row["platform"]);
         
-      <i class="fa fa-twitter fa-invisible fa-5x"></i>
-      
+      foreach ($connections as $connection)
+        echo '<i style="font-size:120px;cursor:pointer" id="' . $connection . '"'
+          . 'class="fa fa-' . $connection . ' fa-5x"></i>'
+          . '<i class="fa fa-twitter fa-invisible fa-5x"></i>';
+      ?>
+      <br><br>
+      <div class="collapse" id="fbFriends">
+        <div class="well">
+          <div class="form-group">
+            <label class="sr-only" for="fbSearch">Name to serch for</label>
+            <div class="input-group">
+              <div class="input-group-addon"><i class="fa fa-search"></i></div>
+              <input type="text" class="form-control" id="fbSearch" placeholder="Friend's name">
+            </div>
+          </div>
+          <br>
+          <i style='font-size:120px;color:darkgrey'
+            class="fa fa-spinner fa-spin fa-5x"></i>
+        </div>
+      </div>
+      <br><br>
+      <h1>Or connect a new app</h1>
       <i style="font-size:120px;cursor:pointer" id="google"
         class="fa fa-google fa-5x"></i>
         
@@ -58,27 +82,12 @@ require("/var/www/awake/assets/php/header.php");
       
       <i style="font-size:120px;cursor:pointer" id="envelope"
         class="fa fa-envelope fa-5x"></i>
-      <br><br>
-      <div class="collapse" id="fbFriends">
-        <div class="well">
-          <div class="form-group">
-            <label class="sr-only" for="fbSearch">Name to serch for</label>
-            <div class="input-group">
-              <div class="input-group-addon"><i class="fa fa-search"></i></div>
-              <input type="text" class="form-control" id="fbSearch" placeholder="Friend's name">
-            </div>
-          </div>
-          <br>
-          <i style='font-size:120px;color:darkgrey'
-            class="fa fa-spinner fa-spin fa-5x"></i>
-        </div>
-      </div>
     </div>
   </div>
 </section>
 
 <script>
-$("#fb").click(function() {
+$("#facebook").click(function() {
   $("#fbFriends").collapse("toggle")
   if ($("#fbFriends a").length == 0) {
     $.ajax({

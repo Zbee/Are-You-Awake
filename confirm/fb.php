@@ -21,7 +21,7 @@ $friendID = explode("_", $response["id"])[1];
 
 $deletePost = $fb->delete("/" . $graph)->getDecodedBody();
 if ($deletePost["success"] != true)
-  die("Your post was not deleted successfully, btw.");
+  throw new Exception ("Your post was not deleted successfully, btw.");
 
 $possibleFriends = $fb->get("/me/friends?ids=" . $friendID)
   ->getDecodedBody()["me"]["data"];
@@ -31,4 +31,9 @@ foreach ($possibleFriends as $friend)
 
 $Friend = $fb->get("/" . $Friend . "?fields=picture,name")
   ->getDecodedBody();
+
+$picture = $Friend["picture"]["data"]["url"];
+$name = $Friend["name"];
+$link = "https://facebook.com/$Friend[id]";
+$id = $Friend["id"];
 ?>

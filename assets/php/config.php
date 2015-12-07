@@ -35,7 +35,8 @@ if (isset($_SESSION['facebook_access_token'])) {
   
   $loggedIn = true;
   $navbar = [
-    ["Check Statuses", "/use"]
+    ["Check Statuses", "/use"],
+    ["Add a check", "/use#add"]
   ];
 }
 

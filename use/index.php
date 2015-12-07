@@ -2,7 +2,25 @@
 require("/var/www/awake/assets/php/header.php");
 ?>
 
-<section class="container-fluid section" id="section6">
+<section class="container-fluid section" id="checks">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
+      <h1>These are all of the people you are checking on</h1>
+      <?php
+      $checks = [];
+      $select = $db->prepare("select * from checks where user=?");
+      $select->execute([$_SESSION["uid"]]);
+      while($row = $select->fetch(PDO::FETCH_ASSOC))
+        array_push($checks, $row["name"]);
+        
+      foreach ($checks as $check)
+        echo $check;
+      ?>
+    </div>
+  </div>
+</section>
+
+<section class="container-fluid section" id="add">
   <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
       <h1>Choose the application a friend is most active on</h1>
